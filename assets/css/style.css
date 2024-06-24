@@ -48,8 +48,9 @@ section{
     background-position: center;
 }
 .container-fluid{
-    margin-top: 80px;
-    width: 85%;
+    margin-top: 50px;
+    width: 70%;
+    margin-bottom: 15px;
     border: none;
     border-radius: 25px;
     box-shadow: -3px -3px 7px #ffffff73,
@@ -71,7 +72,25 @@ section{
     .home-content{
         padding: 10px 10px;
         
+
+        
     }
+    .container-fluid{
+        margin-top: 80px;
+        width: 90%;
+        border: none;
+        border-radius: 25px;
+        box-shadow: -3px -3px 7px #ffffff73,
+                    2px 2px 5px rgba(94,104,121,0.288);
+        
+    }
+    .about .container-fluid .row .col-md-8{
+        color: #595959;
+        text-align: left;
+        padding: 0px 20px 20px 20px;
+    }
+    
+    
     
 }
 
@@ -81,9 +100,9 @@ section{
 
 
 .home-content{
-    padding: 70px 0px 0px 20px;
+    padding: 70px 10px 10px 20px;
     background: #dde1e7;
-    max-width: 600px;
+    
 }
 .home-content h2{
     font-size: 35px;
@@ -137,6 +156,7 @@ section{
     padding: 60px 0px 10px 0px;
 }
 .home-sci a{
+    
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -163,8 +183,8 @@ section{
                 inset -5px -5px 10px #ffffff73;
     
 }
-img{
-    margin: 50px 35px 30px 35px;
+.col-md-5 img{
+    margin: 90px 35px 5px 35px;
     width: 70%;
     height: auto;
     cursor: pointer;
@@ -174,8 +194,60 @@ img{
                 inset -5px -5px 10px #ffffff73;
     
 }
-img:hover{
+.col-md-5 img:hover{
     border: none;
     box-shadow: -5px -5px 10px #ffffff90,
                 2px 2px 5px rgba(94,104,121,1);
 }
+
+
+
+
+/* About */
+
+
+
+  
+.about .container-fluid{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+   
+}
+.about .container-fluid .col-md-8{
+    color: #595959;
+    text-align: left;
+    padding: 90px 50px 30px 50px;
+}
+.about .container-fluid .col-md-8 h1{
+    text-align: center;
+    font-weight: 800;
+    padding: 20px;
+}
+
+.about .container-fluid .col-md-4{
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0px 50px 0px;
+}
+
+.about .container-fluid .col-md-4 img{
+    width: 70%;
+    height: auto;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    box-shadow: -5px -5px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
+
+    
+}
+.about .container-fluid .col-md-4 img:hover{
+    transform: scale(1.1);
+}
+
+
