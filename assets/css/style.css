@@ -63,11 +63,16 @@ section{
 
 
 
-@media(max-width:400px){
+@media(max-width:800px){
     .container-fluid .container .row{
             flex-wrap: wrap;
             flex-direction: column-reverse;
     }
+    .home-content{
+        padding: 10px 10px;
+        
+    }
+    
 }
 
 
@@ -127,6 +132,7 @@ section{
     
 }
 .home-sci{
+    margin-bottom: 20px;
     word-spacing: 20px;
     padding: 60px 0px 10px 0px;
 }
