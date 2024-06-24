@@ -179,14 +179,14 @@ section{
     cursor: pointer;
     border-radius: 50%;
     border: 1px solid #3498db;
-    box-shadow: inset 2px 2px 5px #babecc,
-                inset -5px -5px 10px #ffffff73;
+    box-shadow: -5px -5px 10px #ffffff90,
+                2px 2px 5px rgba(94,104,121,1);
     
 }
 .col-md-5 img:hover{
     border: none;
-    box-shadow: -5px -5px 10px #ffffff90,
-                2px 2px 5px rgba(94,104,121,1);
+    transform: scale(1.1);
+    box-shadow: -5px -5px 8px #ffffff73, 15px 15px 5px rgba(94,104,121,0.288);
 }
 
 
@@ -213,6 +213,7 @@ section{
 }
 .col-md-4 img:hover{
     transform: scale(1.1);
+    box-shadow: -5px -5px 8px #ffffff73, 15px 15px 5px rgba(94,104,121,0.288);
 }
 .about-content p{
     color: #595959;
