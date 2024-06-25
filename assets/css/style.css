@@ -240,8 +240,7 @@ section{
     padding-bottom: 10px;
     cursor: pointer;
     border-radius: 25px;
-    box-shadow: -3px -3px 7px #ffffff90,
-                2px 2px 5px rgba(94,104,121,1);
+    box-shadow: -3px -3px 7px #ffffff90,2px 2px 5px rgba(94,104,121,1);
     
 }
 .skills-content:hover{
