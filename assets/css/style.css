@@ -228,5 +228,30 @@ section{
 }
   
 
+/* My skills */
 
 
+.skills-content{
+    border: none;
+    margin: 10px 5px 15px 5px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: -3px -3px 7px #ffffff90,
+                2px 2px 5px rgba(94,104,121,1);
+    
+}
+.skills-content:hover{
+    transform: scale(1.1);
+}
+
+.skills-content img{
+    padding-bottom: 20px;
+}
+.skills-content h3,h5{
+    color: #595959;
+    font-weight: 800;
+}
