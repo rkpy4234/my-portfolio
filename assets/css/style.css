@@ -287,7 +287,7 @@ section{
 
 /* contact */
 @media(max-width:800px){
-    .container-fluid .col-md-7 .detail{
+    .container-fluid .col-md-4 .detail{
         padding: 10px 0px 50px 10px;
     }
     .col-md-5 .contactform{
