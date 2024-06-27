@@ -327,7 +327,7 @@ section{
     margin-left: 25px;
     width: 90%;
     border: none;
-    padding:20px 30px 50px 30px;
+    padding:10px 30px 30px 30px;
     margin-bottom: 30px;
     border-radius: 20px;
     box-shadow: -3px -3px 7px #ffffff73,
@@ -386,7 +386,7 @@ section{
                 2px 2px 5px rgba(94,104,121,0.288);
 }
 .contactform .submit{
-    padding-top: 25px;
+    padding-top: 20px;
 }
 .contactform .submit input:hover{
     color: #3498db;
