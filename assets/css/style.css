@@ -12,14 +12,18 @@
     box-shadow: 2px 2px 5px #babecc,
                 -5px -5px 10px #ffffff73; 
 }
-.header a{
+
+.header .abc .nav-link,.navbar-brand{
     font-size: 18px;
     color: #595959;
     text-decoration: none;
     font-weight: 500;
-   
 }
-.header a:hover{
+.header .navbar-brand:hover{
+    color: #3498db;
+}
+
+.header .abc .nav-link:hover{
     color: #3498db;
 }
 .dropdown-menu{
