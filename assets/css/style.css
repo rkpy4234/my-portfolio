@@ -69,7 +69,7 @@ section{
 
 
 @media(max-width:800px){
-    .container-fluid .container .row{
+    .home .container-fluid .container .row{
             flex-wrap: wrap;
             flex-direction: column-reverse;
     }
@@ -200,10 +200,12 @@ section{
 
 @media(max-width:800px){
     .about-content{
-        padding: 0px 5px 20px 2px;
-       
-        
+        padding: 0px 5px 20px 2px;   
     }
+    .about .container-fluid .container .row{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+}   
 }
 
 
@@ -237,7 +239,7 @@ section{
 
 .skills-content{
     border: none;
-    margin: 10px 5px 15px 5px;
+    margin: 10px 8px 15px 8px;
     text-align: center;
     justify-content: center;
     padding-top: 20px;
@@ -258,6 +260,9 @@ section{
     color: #595959;
     font-weight: 800;
 }
+
+/* Service */
+
 .service-content{
     border: none;
     margin: 10px 10px 40px 10px;
@@ -277,3 +282,117 @@ section{
     color: #595959;
 }
 
+
+
+
+/* contact */
+@media(max-width:800px){
+    .container-fluid .col-md-7 .detail{
+        padding: 10px 0px 50px 10px;
+    }
+    .col-md-5 .contactform{
+        width: 100%; 
+        margin-left: 0px;
+    }
+}    
+
+
+
+.container-fluid .box{
+    margin-top: 15px;
+    display: flex;
+    color: #595959;
+    
+}
+.container-fluid .box .icon{
+      max-width: 30px; 
+      height: 20px;
+      padding: 4px;
+      color: #595959;
+}
+.container-fluid .box .text{
+    padding-left: 10px;
+}
+.container-fluid .box .text h3{
+    font-weight: 800;
+}
+.container-fluid .box .text p{
+    font-size: 18px;
+}
+.detail{
+    padding: 10px 5px 15px 20px;
+}
+
+.contactform{
+    margin-left: 25px;
+    width: 90%;
+    border: none;
+    padding:20px 30px 50px 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: -3px -3px 7px #ffffff73,
+                2px 2px 5px rgba(94,104,121,0.288);
+
+    
+}   
+.contactform h2{
+    color: #595959;
+    text-align: center;
+    padding-bottom: 5px;
+    
+}
+.contactform .inputbox{
+    color: #595959;
+    padding: 5px;
+}
+.contactform .inputbox input{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    border-radius: 10px;
+    height: 35px;
+    cursor: pointer;
+    box-shadow: -3px -3px 7px #ffffff73,
+                2px 2px 5px rgba(94,104,121,0.288);
+}
+.contactform .inputbox input:focus{
+    box-shadow: inset 2px 2px 5px #babecc,
+                inset -5px -5px 10px #ffffff73;
+}
+.contactform .inputbox textarea{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    border-radius: 10px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: -3px -3px 7px #ffffff73,
+                2px 2px 5px rgba(94,104,121,0.288);
+}
+.contactform .inputbox textarea:focus{
+    box-shadow: inset 2px 2px 5px #babecc,
+                 inset -5px -5px 10px #ffffff73;
+}
+.contactform .submit input{
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    cursor: pointer;
+    box-shadow: -3px -3px 7px #ffffff73,
+                2px 2px 5px rgba(94,104,121,0.288);
+}
+.contactform .submit{
+    padding-top: 25px;
+}
+.contactform .submit input:hover{
+    color: #3498db;
+}
+.contactform .submit input:focus{
+    color: #3498db;
+    box-shadow: inset 2px 2px 5px #babecc,
+                inset -5px -5px 10px #ffffff73;
+}
