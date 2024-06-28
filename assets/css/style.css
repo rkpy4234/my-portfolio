@@ -378,6 +378,7 @@ section{
                  inset -5px -5px 10px #ffffff73;
 }
 .contactform .submit input{
+    color: #595959;
     font-size: 20px;
     width: 100%;
     border: none;
