@@ -142,7 +142,7 @@ nav label {
         display: block;
         padding: 0 10px;
         width: 100%;
-        margin: 24px auto;
+        margin: 15px 10px 0px -10px;
     }
   
     nav .header-main li a {
@@ -181,10 +181,10 @@ nav label {
       display: block;
       opacity: 80%;
       position: absolute;
-      top: 65px;
+      top: 77px;
       left: -100%;
       overflow-y:auto;
-      width:40%;
+      width:50%;
       height: 100vh;
       text-align:center;
       transition: all 0.10s ease;
