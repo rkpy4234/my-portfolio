@@ -120,7 +120,7 @@ nav label {
         transition: all 0.10s ease;
         border: none;
         background: transparent;
-        background-color: rgba(221,225,231,0.8);
+        background-color: rgba(221,225,231,2.9);
         box-shadow: -3px -3px 7px #ffffff73,
                     2px 2px 5px rgba(94,101,121,0.288);
     }
@@ -190,7 +190,7 @@ nav label {
       transition: all 0.10s ease;
       border: none;
       background: transparent;
-      background-color: rgba(221,225,231,0.8);
+      background-color: rgba(221,225,231,2.9);
       box-shadow: -3px -3px 7px #ffffff73,
                   2px 2px 5px rgba(94,101,121,0.288);
     }
