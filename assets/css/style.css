@@ -340,20 +340,24 @@ section{
     .home .container-fluid .container .row{
             flex-wrap: wrap;
             flex-direction: column-reverse;
+            
     }
+   
     .home-content{
         padding: 10px 10px;
         
-
-        
     }
     .container-fluid{
-        margin-top: 80px;
+        margin-top: 90px;
         width: 90%;
         border: none;
         border-radius: 25px;
         box-shadow: var(--box-shadow);
         
+    }
+    .row .col-md-5 img{
+        margin: 35px 35px 5px 35px;
+       
     }
    
     
@@ -442,7 +446,7 @@ section{
 }
 .col-md-5 img{
     margin: 90px 35px 5px 35px;
-    width: 70%;
+    width: 80%;
     height: auto;
     cursor: pointer;
     border-radius: 50%;
@@ -495,7 +499,7 @@ section{
     font-size: 18px;
     margin: 20px 30px 20px 50px;
 }
-.about .about-content h5{
+.about-content h5{
     margin: 80px 30px 20px 50px;
     font-size: 25px;
     font-weight: 600;
