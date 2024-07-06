@@ -20,6 +20,7 @@
                     2px 2px 5px rgba(94,101,121,0.288);
     --box-inset-shadow: inset 2px 2px 5px #babecc,
                         inset -5px -5px 10px #ffffff73;
+    --transparent-color: rgba(221,225,231,0.8);
 
     /* Site Max-Width */
     --site-max-width: 1350px;
@@ -31,8 +32,10 @@ body.dark{
     --text-color:#dde1e7;
     --search-bar: #dde1e7;
     --search-text: #dde1e7;
-    --box-shadow: 0px -2px 7px rgba(0,0,0,1);
-    --box-inset-shadow: inset 1px 1px 5px #babecc;
+    --box-shadow: 0px -1px 10px rgba(0,0,0,1);
+    --box-inset-shadow: inset 2px 2px 5px #000000,
+                        0px 1px 1px #333;
+    --transparent-color: rgba(89,89,89,0.8);
 }
 
 
@@ -134,7 +137,6 @@ nav .header-main>li>a {
     nav .header-main {
         margin-bottom: 10px;
         display: block;
-        opacity: 80%;
         position: absolute;
         top: 76px;
         left: -100%;
@@ -145,7 +147,7 @@ nav .header-main>li>a {
         transition: all 0.10s ease;
         border: none;
         background: transparent;
-        background-color: var(--body-color);
+        background-color: var(--transparent-color);
         box-shadow: var(--box-shadow);
     }
     nav.active .header-main{
@@ -465,13 +467,20 @@ section{
     .about .container-fluid .container .row{
         flex-wrap: wrap;
         flex-direction: column-reverse;
-}   
+    }   
+    .about .about-content p{
+        margin: 10px 30px 20px 30px;
+    }
+    .about .about-content h5{
+        margin: 10px 30px 20px 30px;
+        color: var(--text-color);
+    }
 }
 
 
 
 .col-md-4 .about img{
-    width: 100%;
+    width: 90%;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -484,12 +493,18 @@ section{
 .about-content p{
     color: var(--text-color);
     font-size: 18px;
-    margin: 40px 30px 20px 30px;
+    margin: 20px 30px 20px 50px;
 }
-.about-content h1{
+.about .about-content h5{
+    margin: 80px 30px 20px 50px;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.container-fluid .container h1{
+    padding-top: 30px;
     text-align: center;
     font-weight: 800;
-    margin: 60px;
     color: var(--hover-txt-color);
 }
   
@@ -563,7 +578,7 @@ section{
 
 @media(max-width:800px){
     .container-fluid .col-md-4 .detail{
-        padding: 10px 0px 50px 5px;
+        padding: 10px 0px 20px 30px;
     }
     .col-md-5 .contactform{
         width: 100%; 
@@ -585,10 +600,11 @@ section{
     
 }
 .container-fluid .box .icon{
-      max-width: 25px; 
-      height: 25px;
+      width: 38px; 
+      height: auto;
       padding: 4px;
       color: var(--text-color);
+      
 }
 .container-fluid .box .text{
     padding-left: 10px;
@@ -601,7 +617,7 @@ section{
     font-size: 18px;
 }
 .detail{
-    padding: 10px 5px 15px 20px;
+    padding: 10px 5px 15px 50px;
 }
 
 .contactform{
