@@ -343,8 +343,8 @@ section{
             
     }
    
-    .home-content{
-        padding: 10px 10px;
+    .home .home-content{
+        padding: 50px 30px 20px 30px;
         
     }
     .container-fluid{
@@ -364,7 +364,7 @@ section{
     
 }
 .home-content{
-    padding: 70px 10px 10px 20px;
+    padding: 70px 50px 10px 50px;
     background: var(--body-color);
     
 }
@@ -484,7 +484,7 @@ section{
 
 
 .col-md-4 .about img{
-    width: 90%;
+    width: 100%;
     border: none;
     border-radius: 20px;
     cursor: pointer;
