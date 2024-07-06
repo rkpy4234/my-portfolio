@@ -107,7 +107,11 @@ nav .header-main>li>a {
   }
   /* minimixe maximize nav bar button */
 
-nav label {
+  
+  .searchBox i{
+    display: none;
+  }
+/* nav label {
     font-size: 32px;
     color: var(--hover-txt-color);
     cursor: pointer;
@@ -120,17 +124,13 @@ nav label {
   
   #click {
     display: none;
-  }
+  } */
   
   @media screen and (max-width: 1024px) {
     nav {
         padding: 15px 20px;
     }
-  
-    label .menu_btn {
-        display: block;
-    }
-  
+
     nav .header-main {
         margin-bottom: 10px;
         display: block;
@@ -148,8 +148,43 @@ nav label {
         background-color: var(--body-color);
         box-shadow: var(--box-shadow);
     }
-  
-    #click:checked~ul {
+    nav.active .header-main{
+        left: 0;
+    }
+    .searchBox{
+        display: flex;
+        font-size: 25px;
+        align-items: center;
+        justify-content: center;
+      }
+      .searchBox i{
+        display: block;
+        padding-right: 25px;
+        position: absolute;
+        top: 19px;
+        font-size: 30px;
+        color: var(--text-color);
+        cursor: pointer;
+      }
+      .searchBox i.close{
+        opacity: 0;
+        pointer-events: none;
+      }
+      .searchBox.active i.close{
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .searchBox.active i.open{
+        opacity: 0;
+        pointer-events: none;
+      }
+    
+
+
+
+
+
+    /* #click:checked~ul {
         left: 0px;
     }
     #click:checked~label .close_btn {
@@ -159,7 +194,7 @@ nav label {
     #click:checked~label .menu_btn {
         display: none;
   
-    }
+    } */
     
     nav .header-main li {
         display: block;
@@ -203,7 +238,6 @@ nav label {
         font-size: 15px !important;
     }
     nav .header-main {
-        
       display: block;
       opacity: 80%;
       position: absolute;
