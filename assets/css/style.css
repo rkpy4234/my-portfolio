@@ -241,7 +241,6 @@ nav .header-main>li>a {
     }
     nav .header-main {
       display: block;
-      opacity: 80%;
       position: absolute;
       top: 76px;
       left: -100%;
@@ -252,7 +251,7 @@ nav .header-main>li>a {
       transition: all 0.10s ease;
       border: none;
       background: transparent;
-      background-color: var(--body-color);
+      background-color: var(--transparent-color);
       box-shadow: var(--box-shadow);
     }
 
