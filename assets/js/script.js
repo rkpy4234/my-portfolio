@@ -4,7 +4,8 @@ const body = document.querySelector("body"),
        modeToggle = document.querySelector(".dark-light"),
        searchBox = document.querySelector(".searchBox"),
        open = document.querySelector(".open"),
-       close = document.querySelector(".close");
+       close = document.querySelector(".close"),
+       arrowTop = document.querySelector(".arrowTop");
 
        // nav bar scroll up and down with windows
 
@@ -12,9 +13,11 @@ const body = document.querySelector("body"),
        window.addEventListener("scroll", ()=>{
            let currentScrollpos = window.pageYOffset;
        if(prevScrollpos < currentScrollpos){
-        header.classList.add("hide");
+            header.classList.add("hide");
+            arrowTop.classList.add("show");
        }else{
-        header.classList.remove("hide");
+            header.classList.remove("hide");
+            arrowTop.classList.remove("show");
        }
        prevScrollpos = currentScrollpos;
        })

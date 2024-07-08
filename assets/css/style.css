@@ -39,6 +39,33 @@ body.dark{
 }
 
 
+    /* arrow top  */
+
+.arrowTop{
+    position: fixed;
+    right:30px;
+    bottom: -100%;
+    border: none;
+    border-radius: 18%; 
+}
+.arrowTop.show{
+    bottom: 100px;
+}
+.slideUp{
+  font-size: 40px;
+  color: var(--text-color);
+  border: none;
+  border-radius: 50%; 
+  background-color: var(--body-color);
+  box-shadow: var(--box-shadow);
+ 
+}
+.slideUp:hover{
+    color: var(--hover-txt-color);
+    box-shadow: var(--box-inset-shadow);
+}
+
+
 
 
 

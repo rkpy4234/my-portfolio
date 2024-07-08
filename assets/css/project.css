@@ -20,7 +20,7 @@
                     2px 2px 5px rgba(94,101,121,0.288);
     --box-inset-shadow: inset 2px 2px 5px #babecc,
                         inset -5px -5px 10px #ffffff73;
-
+    --transparent-color: rgba(221,225,231,0.8);
     /* Site Max-Width */
     --site-max-width: 1350px;
   }
@@ -32,7 +32,35 @@ body.dark{
     --search-bar: #dde1e7;
     --search-text: #dde1e7;
     --box-shadow: 0px -2px 7px rgba(0,0,0,1);
-    --box-inset-shadow: inset 1px 1px 5px #babecc;
+    --box-inset-shadow: inset 2px 2px 5px #000000,
+                        0px 1px 1px #333;
+    --transparent-color: rgba(89,89,89,0.8);
+}
+
+   /* arrow top  */
+
+   .arrowTop{
+    position: fixed;
+    right:30px;
+    bottom: -100%;
+    border: none;
+    border-radius: 18%; 
+}
+.arrowTop.show{
+    bottom: 100px;
+}
+.slideUp{
+  font-size: 40px;
+  color: var(--text-color);
+  border: none;
+  border-radius: 50%; 
+  background-color: var(--body-color);
+  box-shadow: var(--box-shadow);
+ 
+}
+.slideUp:hover{
+    color: var(--hover-txt-color);
+    box-shadow: var(--box-inset-shadow);
 }
 
 
@@ -116,21 +144,7 @@ nav .header-main>li>a {
   .searchBox i{
     display: none;
   }
-/* nav label {
-    font-size: 32px;
-    color: var(--hover-txt-color);
-    cursor: pointer;
-  }
-  
-  label .menu_btn,
-  label .close_btn {
-    display: none;
-  }
-  
-  #click {
-    display: none;
-  } */
-  
+
   @media screen and (max-width: 1024px) {
     nav {
         padding: 15px 20px;
@@ -139,7 +153,6 @@ nav .header-main>li>a {
     nav .header-main {
         margin-bottom: 10px;
         display: block;
-        opacity: 80%;
         position: absolute;
         top: 76px;
         left: -100%;
@@ -150,8 +163,9 @@ nav .header-main>li>a {
         transition: all 0.10s ease;
         border: none;
         background: transparent;
-        background-color: var(--body-color);
+        background-color: var(--transparent-color);
         box-shadow: var(--box-shadow);
+        z-index: 99;
     }
     nav.active .header-main{
         left: 0;
@@ -228,7 +242,6 @@ nav .header-main>li>a {
     }
     nav .header-main {
       display: block;
-      opacity: 80%;
       position: absolute;
       top: 76px;
       left: -100%;
@@ -239,8 +252,9 @@ nav .header-main>li>a {
       transition: all 0.10s ease;
       border: none;
       background: transparent;
-      background-color: var(--body-color);
+      background-color: var(--transparent-color);
       box-shadow: var(--box-shadow);
+      z-index: 99;
     }
 
     /* mode */
@@ -399,7 +413,7 @@ section{
   height: 8px;
   border-radius: 50%;
   background-color: red;
-  z-index: 999;
+  z-index: 1;
   
 }
 .hand{
