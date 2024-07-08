@@ -47,6 +47,7 @@ body.dark{
     bottom: -100%;
     border: none;
     border-radius: 18%; 
+    transition: 0.2s ease;
 }
 .arrowTop.show{
     bottom: 100px;
