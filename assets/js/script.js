@@ -6,15 +6,26 @@ const body = document.querySelector("body"),
        close = document.querySelector(".close");
 
        
+        // for always selector dark or light mode
+        let getMode = localStorage.getItem("mode");
+        if (getMode && getMode === "dark-mode"){
+         body.classList.add("dark");
+        }
 
 //js code to toggle dark and light mode
        modeToggle.addEventListener("click",()=>{
         modeToggle.classList.toggle("active");
         body.classList.toggle("dark");
+
+        //    for always dark or light mode    
+    
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode", "light-mode");
+        }else{
+            localStorage.setItem("mode", "dark-mode");
+        }
+
        });
-
-
-
 
        //toggle for nav bar
        searchBox.addEventListener("click", ()=>{
@@ -36,4 +47,33 @@ const body = document.querySelector("body"),
               searchBox.classList.remove("active");
           }
       })
+
+
+      
+//Clock Js Start
+let hr = document.getElementById('hour');
+let min = document.getElementById('min');
+let sec = document.getElementById('sec');
+
+function displayTime(){
+    let date = new Date();
+
+    // Getting hour, mins, secs from date
+    let hh = date.getHours();
+    let mm = date.getMinutes();
+    let ss = date.getSeconds();
+
+    let hRotation = 30*hh + mm/2;
+    let mRotation = 6*mm;
+    let sRotation = 6*ss;
+
+    hr.style.transform = `rotate(${hRotation}deg)`;
+    min.style.transform = `rotate(${mRotation}deg)`;
+    sec.style.transform = `rotate(${sRotation}deg)`;
+
+}
+
+setInterval(displayTime, 1000);
+
+//clock js close
       

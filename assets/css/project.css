@@ -310,7 +310,6 @@ section{
   .clocked .container-fluid-clock{
     width: 90%;
     min-height: 50vh;
-    margin-top: -140px;
     margin-bottom: 15px;
   }
   .bdy .container {
@@ -333,7 +332,7 @@ section{
 
 .container-fluid-clock{
   padding-top: 20px;
-  width: auto;
+  width: 30%;
   min-height: 60vh;
   background-color: var(--body-color);
   display: flex;
@@ -394,7 +393,7 @@ section{
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--text-color);
+  background-color: red;
   z-index: 999;
   
 }
@@ -411,62 +410,119 @@ section{
   height: var(--h);
   border-radius: 8px;
 } 
-.source{
-  float: right;
-  cursor: pointer;
-  margin-top: 20px;
-  padding-right: 10px;
-  padding-bottom: 20px;
 
-}
-.source input{
-  outline: none;
+
+
+/* Login Css */
+
+.bedy{
+  min-height: 100vh;
   width: 100%;
-  cursor: pointer;
-  padding: 5px 15px;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text-color);
-  border: none;
-  border-radius: 20px;
-  background-color: var(--body-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--body-color);
+  background-size: cover;
+  background-position: center;
+}
+.bedy>.contant{
+  width: 330px;
+  background: var(--body-color);
+  border-radius: 10px;
+  padding: 40px 30px;
   box-shadow: var(--box-shadow);
+
 }
-.source input:hover{
+.contant .text h1{
+  font-size: 33px;
+  font-weight: 700;
+  margin-bottom: 35px;
   color: var(--hover-txt-color);
-}
-/* .source input:focus{
-  color: var(--hover-txt-color);
-  box-shadow: var(--box-inset-shadow);
-} */
-
-/* source code */
-
-.sourceCode{
- margin: 25px 0px;
- display: none;
- transition: all 0.4 ease;
- 
- 
-}
-.sourceCode.active{
-  display: block;
-
-}
-
-.sourceCode .html{
-  width: 100%;
-  margin: 25px 0px 0px 0px;
-}
-.html img{
-  width: 100%;
-  border: none;
-  border-radius: 15px;
-  box-shadow: var(--box-shadow);
-  cursor: pointer;
-  margin: 5px 0;
+  text-align: center;
   
 }
-.html img:hover{
-  transform: scale(1.1);
+.contact .fielder{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
 }
+.fielder input{
+  height: 35px;
+  width: 100%;
+  padding-left: 42px;
+  padding-right: 40px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  color: var(--text-color);
+  background: var(--body-color);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow); 
+      
+}
+.fielder input:focus{
+  box-shadow: var(--box-inset-shadow);
+}
+
+
+
+.fielder:nth-child(2){
+  margin-top: 10px;
+}
+.fielder svg{
+  margin-top: 9px;
+  position: absolute;
+  width: 50px;
+  line-height: 50px;
+  color: var(--text-color);
+}
+.forgot-pass{
+  text-align: left;
+  margin: 10px 0 10px 5px;
+}
+.forgot-pass a{
+  font-size: 16px;
+  color: var(--hover-txt-color);
+  text-decoration: none;
+}
+.forgot-pass:hover a{
+  text-decoration: underline;
+}
+button{
+  margin: 15px 0;
+  width: 100%;
+  height: 40px;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 600;
+  background: var(--body-color);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);   
+}
+button:hover{
+  color: var(--hover-txt-color);
+ 
+}
+button:focus{
+  color: var(--hover-txt-color);
+  box-shadow: var(--box-inset-shadow); 
+}
+.signup{
+  font-size: 16px;
+  color: var(--text-color);
+  margin: 10px 0;
+}
+.signup a{
+  color: var(--hover-txt-color);
+  text-decoration: none;
+
+}
+.signup a:hover{
+  text-decoration: underline;
+} 
+
+
