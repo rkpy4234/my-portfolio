@@ -55,6 +55,10 @@ body.dark{
     background: var(--body-color);
     border: none;
     box-shadow: var(--box-shadow);
+    transition: 0.3s ease;
+  }
+  header.hide{
+    transform: translatey(-100%);
   }
   nav .nav-logo h1 {
     color: var(--text-color);

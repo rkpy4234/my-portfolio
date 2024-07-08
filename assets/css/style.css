@@ -42,8 +42,6 @@ body.dark{
 
 
 
-
-
   .header-main a {
     text-decoration: none;
   }
@@ -58,7 +56,13 @@ body.dark{
     background: var(--body-color);
     border: none;
     box-shadow: var(--box-shadow);
+    transition: 0.3s ease;
   }
+  header.hide{
+    transform: translatey(-100%);
+  }
+
+
   nav .nav-logo h1 {
     color: var(--text-color);
     font-weight: 600;
@@ -73,7 +77,9 @@ body.dark{
     margin: 0 auto;
     background-color: var(--body-color);
     max-width: var(--site-max-width);
+    
   }
+ 
   nav .nav_logo a {
   display: flex;
   gap: 15px;

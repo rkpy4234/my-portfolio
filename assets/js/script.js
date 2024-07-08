@@ -1,61 +1,95 @@
 const body = document.querySelector("body"),
-       nav = document.querySelector("nav"),
-       modeToggle = document.querySelector(".dark-light"),
-       searchBox = document.querySelector(".searchBox"),
-       open = document.querySelector(".open"),
-       close = document.querySelector(".close");
+    header = document.querySelector("header"),
+    nav = document.querySelector("nav"),
+    modeToggle = document.querySelector(".dark-light"),
+    searchBox = document.querySelector(".searchBox"),
+    open = document.querySelector(".open"),
+    close = document.querySelector(".close");
 
-       
-        // for always selector dark or light mode
-        let getMode = localStorage.getItem("mode");
-        if (getMode && getMode === "dark-mode"){
-         body.classList.add("dark");
-        }
+
+//scroll nav bar while scrolling up down
+let prevScrollpos = window.pageYOffset;
+
+window.addEventListener("scroll", () => {
+    let currentScrollpos = window.pageYOffset;
+
+    if (prevScrollpos < currentScrollpos) {
+        header.classList.add("hide");
+    } else {
+        header.classList.remove("hide");
+    }
+    prevScrollpos = currentScrollpos;
+})
+
+
+
+
+// let lastScroll = 0
+// window.addEventListener('scroll', ()=>{
+//     const currentScroll = window.scroll;
+//     if (currentScroll > lastScroll){
+//         console.log('scroll Down')
+//         nav.classList.add('hide')
+//     }else{
+//         console.log('scroll up')
+//         nav.classList.remove('hide')
+//     }
+//     lastScroll = currentScroll
+// })
+
+
+
+
+// for always selector dark or light mode
+let getMode = localStorage.getItem("mode");
+if (getMode && getMode === "dark-mode") {
+    body.classList.add("dark");
+}
 
 //js code to toggle dark and light mode
-       modeToggle.addEventListener("click",()=>{
-        modeToggle.classList.toggle("active");
-        body.classList.toggle("dark");
+modeToggle.addEventListener("click", () => {
+    modeToggle.classList.toggle("active");
+    body.classList.toggle("dark");
 
-        //    for always dark or light mode    
-    
-        if(!body.classList.contains("dark")){
-            localStorage.setItem("mode", "light-mode");
-        }else{
-            localStorage.setItem("mode", "dark-mode");
-        }
+    //    for always dark or light mode    
 
-       });
+    if (!body.classList.contains("dark")) {
+        localStorage.setItem("mode", "light-mode");
+    } else {
+        localStorage.setItem("mode", "dark-mode");
+    }
 
-       //toggle for nav bar
-       searchBox.addEventListener("click", ()=>{
-              searchBox.classList.toggle("active");
-              // nav.classList.add("active");
-          });
-      
-      
-      //for side bar
-      
-      open.addEventListener("click",()=>{
-          nav.classList.add("active");
-      })
-      body.addEventListener("click", e =>{
-          let clickedElm = e.target;
-      
-          if(!clickedElm.classList.contains("open") && !clickedElm.classList.contains("menu")){
-              nav.classList.remove("active");
-              searchBox.classList.remove("active");
-          }
-      })
+});
+
+//toggle for nav bar
+searchBox.addEventListener("click", () => {
+    searchBox.classList.toggle("active");
+    // nav.classList.add("active");
+});
 
 
-      
+//for side bar
+
+open.addEventListener("click", () => {
+    nav.classList.add("active");
+})
+body.addEventListener("click", e => {
+    let clickedElm = e.target;
+
+    if (!clickedElm.classList.contains("open") && !clickedElm.classList.contains("menu")) {
+        nav.classList.remove("active");
+        searchBox.classList.remove("active");
+    }
+})
+
+
+
 //Clock Js Start
 let hr = document.getElementById('hour');
 let min = document.getElementById('min');
 let sec = document.getElementById('sec');
 
-function displayTime(){
+function displayTime() {
     let date = new Date();
 
     // Getting hour, mins, secs from date
@@ -63,9 +97,9 @@ function displayTime(){
     let mm = date.getMinutes();
     let ss = date.getSeconds();
 
-    let hRotation = 30*hh + mm/2;
-    let mRotation = 6*mm;
-    let sRotation = 6*ss;
+    let hRotation = 30 * hh + mm / 2;
+    let mRotation = 6 * mm;
+    let sRotation = 6 * ss;
 
     hr.style.transform = `rotate(${hRotation}deg)`;
     min.style.transform = `rotate(${mRotation}deg)`;
@@ -76,4 +110,3 @@ function displayTime(){
 setInterval(displayTime, 1000);
 
 //clock js close
-      
