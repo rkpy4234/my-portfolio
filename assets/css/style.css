@@ -701,7 +701,7 @@ section{
 
 footer{
     margin: 0;
-    padding: 0;
+    padding: 0px 0px 28px 0px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -709,7 +709,9 @@ footer{
     background: var(--body-color);
     background-size: cover;
     background-position: center;
+    
 }
+
 
 
 .container-fluid-footer{
@@ -805,15 +807,18 @@ footer{
 }
 
 
-.footer-fixed{
+.footerr{
     display: flex;
     justify-content: center;
     align-items: center;
     background-size: cover;
     background-position: center;
-   
-
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
+
+
 .foo-fixed{
     width: 90%;
     justify-content: center;

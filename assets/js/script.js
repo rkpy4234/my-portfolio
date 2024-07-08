@@ -15,27 +15,13 @@ window.addEventListener("scroll", () => {
 
     if (prevScrollpos < currentScrollpos) {
         header.classList.add("hide");
+        
     } else {
         header.classList.remove("hide");
+        
     }
     prevScrollpos = currentScrollpos;
 })
-
-
-
-
-// let lastScroll = 0
-// window.addEventListener('scroll', ()=>{
-//     const currentScroll = window.scroll;
-//     if (currentScroll > lastScroll){
-//         console.log('scroll Down')
-//         nav.classList.add('hide')
-//     }else{
-//         console.log('scroll up')
-//         nav.classList.remove('hide')
-//     }
-//     lastScroll = currentScroll
-// })
 
 
 
