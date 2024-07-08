@@ -96,7 +96,7 @@ body.dark{
     font-weight: 600;
     font-size: 30px;
   }
-  
+ 
   nav {
     display: flex;
     padding: 10px 0;
@@ -106,11 +106,7 @@ body.dark{
     background-color: var(--body-color);
     max-width: var(--site-max-width);
   }
-  nav .nav_logo a {
-  display: flex;
-  gap: 15px;
-  align-items: right;
-}
+
 nav .header-main{
   display: flex;
   
