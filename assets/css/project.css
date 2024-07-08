@@ -58,8 +58,9 @@ body.dark{
     transition: 0.3s ease;
   }
   header.hide{
-    transform: translatey(-100%);
+    transform: translateY(-100%);
   }
+
   nav .nav-logo h1 {
     color: var(--text-color);
     font-weight: 600;
@@ -466,7 +467,7 @@ section{
       
 }
 .fielder input:focus{
-  box-shadow: var(--box-inset-shadow);
+  box-shadow: var(--box-inset-shadow)
 }
 
 
