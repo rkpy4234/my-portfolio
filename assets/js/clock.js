@@ -3,9 +3,9 @@ const body = document.querySelector("body"),
        modeToggle = document.querySelector(".dark-light"),
        searchBox = document.querySelector(".searchBox"),
        open = document.querySelector(".open"),
-       close = document.querySelector(".close"),
-       source = document.querySelector(".source");
-       sourceCode = document.querySelector(".sourceCode");
+       close = document.querySelector(".close");
+    //    source = document.querySelector(".source");
+    //    sourceCode = document.querySelector(".sourceCode");
 
 //js code to toggle dark and light mode
        modeToggle.addEventListener("click",()=>{
@@ -34,10 +34,10 @@ const body = document.querySelector("body"),
       })
       
 //Source Code viewer
-       source.addEventListener("click",()=>{
-        sourceCode.classList.toggle("active");
-        outer.classList.toggle("active");
-       });
+    //    source.addEventListener("click",()=>{
+    //     sourceCode.classList.toggle("active");
+    //     outer.classList.toggle("active");
+    //    });
 
 
 
