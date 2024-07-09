@@ -12,10 +12,11 @@
     --body-color: #dde1e7;
     --nav-color:#dde1e7;
     --side-nav:#dde1e7;
-    --text-color:#595959;
+    --text-color: #595959;
+    --header: #2C3E50;
     --search-bar: #595959;
     --search-text: #595959;
-    --hover-txt-color:#3498db;
+    --hover-txt-color:#1A73E8;
     --box-shadow: -3px -3px 7px #ffffff73,
                     2px 2px 5px rgba(94,101,121,0.288);
     --box-inset-shadow: inset 2px 2px 5px #babecc,
@@ -26,16 +27,21 @@
     --site-max-width: 1350px;
   }
 body.dark{
-    --body-color: #595959;
-    --nav-color:#595959;
-    --side-nav:#595959;
-    --text-color:#dde1e7;
-    --search-bar: #dde1e7;
-    --search-text: #dde1e7;
-    --box-shadow: 0px -1px 10px rgba(0,0,0,1);
-    --box-inset-shadow: inset 2px 2px 5px #000000,
-                        0px 1px 1px #333;
-    --transparent-color: rgba(89,89,89,0.8);
+    --body-color: #121212;
+    --nav-color:#1f1f1f;
+    --side-nav:#1a1a1a;
+    --text-color: #e0e0e0;
+    --header: #ffffff;
+    --hover-txt-color:#bb86fc;
+    --box-shadow: 0px 4px 6px rgba(0,0,0,0.4),
+                   0px -4px 6px rgba(0,0,0,0.4),
+                   4px 0px 6px rgba(0,0,0,0.4),
+                   -4px 0px 6px rgba(0,0,0,0.4);
+    --box-inset-shadow: inset 0px 2px 4px rgba(0,0,0,0.4),
+                        inset 0px -2px 4px rgba(0,0,0,0.4),
+                        inset 2px 0px 4px rgba(0,0,0,0.4),
+                        inset -2px 0px 4px rgba(0,0,0,0.4);
+    --transparent-color: rgba(26,26,26,0.9);
 }
 
 
@@ -69,12 +75,9 @@ body.dark{
 
 
 
-
-
-
-
   .header-main a {
     text-decoration: none;
+    background-color: var(--nav-color);
   }
   .header-main {
     list-style: none;
@@ -84,7 +87,7 @@ body.dark{
     top: 0;
     width: 100%;
     z-index: 1;
-    background: var(--body-color);
+    background: var(--nav-color);
     border: none;
     box-shadow: var(--box-shadow);
     transition: 0.3s ease;
@@ -93,7 +96,8 @@ body.dark{
     transform: translatey(-100%);
   }
   nav .nav-logo h1 {
-    color: var(--text-color);
+    color: var(--header);
+    background-color: var(--nav-color);
     font-weight: 600;
     font-size: 30px;
   }
@@ -104,13 +108,13 @@ body.dark{
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    background-color: var(--body-color);
+    background-color: var(--nav-color);
     max-width: var(--site-max-width);
   }
 
 nav .header-main{
   display: flex;
-  
+  background-color: var(--nav-color);
   gap: 15px;
   margin-bottom: -2px;
 }
@@ -119,7 +123,8 @@ nav .header-main>li>a {
     padding: 10px 10px;
     font-size: 18px;
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--header);
+    background-color: var(--nav-color);
     transition: all 0.2s ease;
   }
   
@@ -143,20 +148,7 @@ nav .header-main>li>a {
   .searchBox i{
     display: none;
   }
-/* nav label {
-    font-size: 32px;
-    color: var(--hover-txt-color);
-    cursor: pointer;
-  }
-  
-  label .menu_btn,
-  label .close_btn {
-    display: none;
-  }
-  
-  #click {
-    display: none;
-  } */
+
   
   @media screen and (max-width: 1024px) {
     nav {
@@ -187,6 +179,7 @@ nav .header-main>li>a {
         font-size: 25px;
         align-items: center;
         justify-content: center;
+        background-color: var(--nav-color);
       }
       .searchBox i{
         display: block;
@@ -194,8 +187,9 @@ nav .header-main>li>a {
         position: absolute;
         top: 19px;
         font-size: 30px;
-        color: var(--text-color);
+        color: var(--header);
         cursor: pointer;
+        background-color: var(--nav-color);
       }
       .searchBox i.close{
         opacity: 0;
@@ -210,38 +204,22 @@ nav .header-main>li>a {
         pointer-events: none;
       }
     
-
-
-
-
-
-    /* #click:checked~ul {
-        left: 0px;
-    }
-    #click:checked~label .close_btn {
-        display: block;
-    }
-  
-    #click:checked~label .menu_btn {
-        display: none;
-  
-    } */
     
     nav .header-main li {
         display: block;
-        padding: 0 10px;
+        border-radius: 20px;
         width: 100%;
         margin: 15px 10px 0px -10px;
     }
   
     nav .header-main li a {
-        color: var(--text-color);
+        color: var(--header);
         border: none;
         border-radius: 10px;
         box-shadow: var(--box-shadow);  
     }
     nav .header-main li a:focus {
-      color: var(--text-color);
+      color: var(--header);
       border: none;
       border-radius: 10px;
       box-shadow: var(--box-inset-shadow); 
@@ -283,6 +261,9 @@ nav .header-main>li>a {
       background-color: var(--transparent-color);
       box-shadow: var(--box-shadow);
     }
+    nav .header-main a{
+        width: 100%;
+    }
 
     /* mode */
     .darkLight-searchBox .dark-light{
@@ -300,6 +281,7 @@ nav .header-main>li>a {
     position: absolute;
     right: 20px;
     top: 16px;
+    background-color: var(--nav-color);
 }
 .darkLight-searchBox .dark-light,
 .darkLight-searchBox .searchtoggle{
@@ -309,13 +291,15 @@ nav .header-main>li>a {
     align-items: center;
     justify-content: center;
     margin: 0 5px;
+    background-color: var(--nav-color);
 }
 .dark-light i,
 .searchtoggle i{
     position: absolute;
-    color: var(--text-color);
+    color: var(--header);
     font-size: 22px;
     cursor: pointer;
+    background-color: var(--nav-color);
     transition: all 0.3s ease;
 }
 /* sun */
@@ -331,8 +315,6 @@ nav .header-main>li>a {
     opacity: 0;
     pointer-events: none;
 }
-
-
 
 
 /* home */
@@ -357,10 +339,6 @@ section{
     box-shadow: var(--box-shadow);
     
 }
-
-
-
-
 
 
 
@@ -399,7 +377,7 @@ section{
 .home-content h2{
     font-size: 35px;
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--header);
     
 }
 .home-content h3{
@@ -409,7 +387,7 @@ section{
     line-height: 1.2;
 }
 .home-content p{
-    color: var(--hover-txt-color);
+    color: var(--text-color);
     font-size: 18px;
     margin: 20px 0 40px;
 }
@@ -488,8 +466,6 @@ section{
 }
 
 
-
-
 /* About */
 
 @media(max-width:800px){
@@ -508,7 +484,6 @@ section{
         color: var(--text-color);
     }
 }
-
 
 
 .col-md-4 .about img{
@@ -531,13 +506,13 @@ section{
     margin: 80px 30px 20px 50px;
     font-size: 25px;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--header);
 }
 .container-fluid .container h1{
     padding-top: 30px;
     text-align: center;
     font-weight: 800;
-    color: var(--hover-txt-color);
+    color: var(--header);
 }
   
 
@@ -546,7 +521,7 @@ section{
     text-align: center;
     padding: 30px 0 10px 0;
     font-weight: 800;
-    color: var(--hover-txt-color);
+    color: var(--header);
 }
 
 .skills-content{
@@ -578,7 +553,7 @@ section{
     text-align: center;
     padding: 30px 0 10px 0;
     font-weight: 800;
-    color: var(--hover-txt-color);
+    color: var(--header);
 }
 .service-content{
     border: none;
@@ -594,16 +569,14 @@ section{
     width:40%;
     margin: 8%;
 }
+
 .service-content h3{
     font-weight: 600;
-    color: var(--hover-txt-color);
+    color: var(--header);
 }
 .service-content h6{
     color: var(--text-color);
 }
-
-
-
 
 /* contact */
 
@@ -622,7 +595,7 @@ section{
     text-align: center;
     padding: 30px 0 10px 0;
     font-weight: 800;
-    color: var(--hover-txt-color);
+    color: var(--header);
 }
 
 .container-fluid .box{
@@ -642,6 +615,7 @@ section{
     padding-left: 10px;
 }
 .container-fluid .box .text h3{
+    color: var(--header);
     font-weight: 550;
     font-size: 23px;
 }
@@ -664,13 +638,14 @@ section{
     
 }   
 .contactform h2{
-    color: var(--text-color);
+    color: var(--header);
     text-align: center;
     padding-bottom: 5px;
+    font-weight: 700;
     
 }
 .contactform .inputbox{
-    color: var(--text-color);
+    color: var(--header);
     padding: 5px;
 }
 .contactform .inputbox input{
@@ -681,6 +656,7 @@ section{
     border-radius: 10px;
     height: 35px;
     cursor: pointer;
+    color: var(--text-color);
     box-shadow: var(--box-shadow);
 }
 .contactform .inputbox input:focus{
@@ -694,14 +670,16 @@ section{
     border-radius: 10px;
     height: 60px;
     cursor: pointer;
+    color: var(--text-color);
     box-shadow: var(--box-shadow);
 }
 .contactform .inputbox textarea:focus{
     box-shadow:var(--box-inset-shadow);
 }
 .contactform .submit input{
-    color: var(--text-color);
+    color: var(--header);
     font-size: 20px;
+    font-weight: 600;
     width: 100%;
     border: none;
     border-radius: 10px;
