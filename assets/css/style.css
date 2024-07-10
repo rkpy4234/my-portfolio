@@ -33,10 +33,10 @@ body.dark{
     --text-color: #e0e0e0;
     --header: #ffffff;
     --hover-txt-color:#bb86fc;
-    --box-shadow: 0px 4px 6px rgba(0,0,0,0.4),
-                   0px -4px 6px rgba(0,0,0,0.4),
-                   4px 0px 6px rgba(0,0,0,0.4),
-                   -4px 0px 6px rgba(0,0,0,0.4);
+    --box-shadow: 0px 4px 6px rgba(56, 49, 49, 0.4),
+                   0px -4px 6px rgba(56, 49, 49, 0.4),
+                   4px 0px 6px rgba(56, 49, 49, 0.4),
+                   -4px 0px 6px rgba(56, 49, 49, 0.4);
     --box-inset-shadow: inset 0px 2px 4px rgba(0,0,0,0.4),
                         inset 0px -2px 4px rgba(0,0,0,0.4),
                         inset 2px 0px 4px rgba(0,0,0,0.4),
@@ -95,11 +95,16 @@ body.dark{
   header.hide{
     transform: translatey(-100%);
   }
-  nav .nav-logo h1 {
+  .nav-logo>a{
     color: var(--header);
     background-color: var(--nav-color);
     font-weight: 600;
     font-size: 30px;
+    font-size: 35px;
+    padding: 10px 0;
+  }
+  nav .nav-logo h1 {
+ 
   }
  
   nav {
@@ -609,7 +614,7 @@ section{
       width: 30px; 
       height: auto;
       padding: 4px;
-      color: var(--text-color);
+      color: var(--header);
       
 }
 .container-fluid .box .text{
