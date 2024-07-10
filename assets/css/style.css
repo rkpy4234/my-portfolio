@@ -95,17 +95,16 @@ body.dark{
   header.hide{
     transform: translatey(-100%);
   }
-  .nav-logo>a{
+  nav .nav-logo a{
     color: var(--header);
     background-color: var(--nav-color);
-    font-weight: 600;
-    font-size: 30px;
+    font-weight: 700;
     font-size: 35px;
     padding: 10px 0;
   }
-  nav .nav-logo h1 {
+  /* nav .nav-logo h1 {
  
-  }
+  } */
  
   nav {
     display: flex;
