@@ -94,3 +94,23 @@ setInterval(displayTime, 1000);
 
 //clock js close
       
+
+// Contact form in google sheet
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwZnvh2KtYWauEBK7vHu2FbWv-SYh0rtDnekCByhAzIexSdUNqfUkNeGEemwfalVmNCiw/exec';
+const form = document.forms['contactform'];
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      if (response.ok) {
+        alert("Thank You! Your detail is Submitted Successfully.");
+        window.location.reload();
+      } else {
+        return Promise.reject(new Error('Failed to submit'));
+      }
+    })
+    .catch(error => console.error('Error!', error.message));
+});
+
+

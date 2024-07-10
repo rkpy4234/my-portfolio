@@ -566,6 +566,7 @@ section{
     box-shadow: var(--box-shadow);
 }
 .service-content img{
+   
     width:40%;
     margin: 8%;
 }
