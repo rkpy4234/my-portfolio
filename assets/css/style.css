@@ -153,11 +153,27 @@ nav .header-main>li>a {
     display: none;
   }
 
+  @media screen and (max-width: 1485px){
+    nav {
+        display: flex;
+        padding: 10px 0;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        background-color: var(--nav-color);
+        max-width: var(--site-max-width);
+      }
+  }
+
+
+
   
   @media screen and (max-width: 1024px) {
     nav {
         padding: 15px 20px;
+        justify-content: space-between;
     }
+    
 
     nav .header-main {
         margin-bottom: 10px;
