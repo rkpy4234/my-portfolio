@@ -351,7 +351,7 @@ section {
     outline: none;
     border-radius: 8px;
     color: var(--color);
-    background-color: var(--background);
+    background-color: var(--body-color);
     font-size: 20px;
     padding-left: 10px;
     box-shadow: var(--box-shadow);
@@ -364,14 +364,14 @@ section {
     outline: none;
     border-radius: 8px;
     color: var(--color);
-    background-color: var(--background);
+    background-color: var(--body-color);
     font-size: 20px;
     padding-left: 10px;
     box-shadow: var(--box-shadow);
 }
 .billpayment input:focus{
-    color: var(--hover);
-    box-shadow: var(--inset-boxshadow);
+    color: var(--hover-txt-color);
+    box-shadow: var(--box-inset-shadow);
 }
 button{
     margin-right: 10px;
@@ -379,11 +379,11 @@ button{
     padding: 5px 10px;
     border: none;
     outline: none;
-    color: var(--color);
+    color: var(--text-color);
     cursor: pointer;
     float: right;
     border-radius: 10px;
-    background-color: var(--background);
+    background-color: var(--body-color);
     box-shadow: var(--box-shadow);
 }
 button:focus{
