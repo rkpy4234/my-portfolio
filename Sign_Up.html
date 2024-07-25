@@ -148,10 +148,10 @@
                 <!-- <label>Conform Password :</label><br>
                 <input type="password" name="" placeholder="Enter Conform Password*"><br> -->
                 <div class="btn">
-                    <input type="submit" value="Send" id="submit">
+                    <input type="submit" value="Register" id="submit">
                 </div>
                 <div class="login">I remenbered?
-                    <a href="index.html">Login</a>
+                    <a href="login.html">Login</a>
                 </div>
             </form>
         </div>
@@ -168,7 +168,7 @@
                 .then(data => {
                     if (data.result === 'success') {
                         alert("Successfully Registered");
-                        window.location.href = "index.html";
+                        window.location.href = "login.html";
                     } else {
                         alert("Error: " + data.error);
                     }
