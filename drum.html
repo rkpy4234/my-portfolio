@@ -24,6 +24,7 @@
   
   }
   :root {
+    --header: #2C3E50;
     --body-color: #dde1e7;
     --nav-color:#dde1e7;
     --side-nav:#dde1e7;
@@ -40,6 +41,7 @@
     --site-max-width: 1350px;
   }
 body.dark{
+    --header: #ffffff;
     --body-color: #595959;
     --nav-color:#595959;
     --side-nav:#595959;
@@ -67,7 +69,7 @@ body.dark{
 }
 .slideUp{
   font-size: 40px;
-  color: var(--text-color);
+  color: var(--header);
   border: none;
   border-radius: 50%; 
   background-color: var(--body-color);
@@ -84,11 +86,10 @@ body.dark{
 
 
 
-
-  .header-main a {
+.header-main a {
     text-decoration: none;
-  }
-  .header-main {
+}
+.header-main {
     list-style: none;
   }
   header {
@@ -106,7 +107,7 @@ body.dark{
   }
 
   nav .nav-logo h1 {
-    color: var(--text-color);
+    color: var(--header);
     font-weight: 600;
     font-size: 30px;
   }
@@ -120,10 +121,10 @@ body.dark{
     background-color: var(--body-color);
     max-width: var(--site-max-width);
   }
-  nav .nav_logo a {
-  display: flex;
-  gap: 15px;
-  align-items: right;
+nav .nav_logo a {
+   display: flex;
+   gap: 15px;
+    align-items: right;
 }
 nav .header-main{
   display: flex;
@@ -136,7 +137,7 @@ nav .header-main>li>a {
     padding: 10px 10px;
     font-size: 18px;
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--header);
     transition: all 0.2s ease;
   }
   
@@ -167,6 +168,7 @@ nav .header-main>li>a {
     }
 
     nav .header-main {
+        color: var(--header);
         margin-bottom: 10px;
         display: block;
         position: absolute;
@@ -198,7 +200,7 @@ nav .header-main>li>a {
         position: absolute;
         top: 19px;
         font-size: 30px;
-        color: var(--text-color);
+        color: var(--header);
         cursor: pointer;
       }
       .searchBox i.close{
@@ -223,7 +225,7 @@ nav .header-main>li>a {
     }
   
     nav .header-main li a {
-        color: var(--text-color);
+        color: var(--header);
         border: none;
         border-radius: 10px;
         box-shadow: var(--box-shadow);  
@@ -302,7 +304,7 @@ nav .header-main>li>a {
 .dark-light i,
 .searchtoggle i{
     position: absolute;
-    color: var(--text-color);
+    color: var(--header);
     font-size: 22px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -331,7 +333,7 @@ section{
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: var(--text-color);
+
   background-color: var(--body-color);
  
   
@@ -341,7 +343,7 @@ section{
   padding: 20px 0;
   width: auto;
   border: none;
-  color: var(--text-color);
+  color: var(--header);
   background-color: var(--body-color);
   border-radius: 20px;
   box-shadow: -3px -3px 7px #ffffff73,
@@ -349,6 +351,9 @@ section{
 }
 .table-hover{
   color: var(--text-color);
+}
+#table-header{
+  color: var(--header);
 }
 
 </style>
@@ -359,7 +364,7 @@ section{
     <header>
         <nav>
             <div class="nav-logo">
-                <a style="text-decoration: none;" href="puja.html">
+                <a style="text-decoration: none;" href="drum.html">
                     <h1><span id="fullName"></span></h1>
                 </a>
             </div>
