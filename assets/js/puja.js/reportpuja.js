@@ -76,33 +76,19 @@ const body = document.querySelector("body"),
         }
     });
 
-    
-    //table view
-    document.addEventListener('DOMContentLoaded', function() {
-        fetch('https://script.google.com/macros/s/AKfycby6kIkSwiTFaZt-gPODlEOFPwigQlgBO0L1ktYMjcRiwfhmFNWY8WNIB9BopLmP4jwM8Q/exec?sheet=puja&range=C1:E15')
-            .then(response => response.json())
-            .then(sheetData => {
-                const tableHeader = document.getElementById('table-header');
-                const tableBody = document.getElementById('table-body');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxqIV-CGecGr91jPwuMjZNwij7FPIFB0QX9HqUlnbdrr9oCQxs2RW5sHphCBAGe3kvQmg/exec?sheet=puja';
+    const form = document.forms['problem'];
 
-                // Add headers to the table
-                let headers = sheetData[0];
-                headers.forEach(header => {
-                    let th = document.createElement('th');
-                    th.textContent = header;
-                    tableHeader.appendChild(th);
-                });
-
-                // Add data rows to the table
-                for (let i = 1; i < sheetData.length; i++) {
-                    let tr = document.createElement('tr');
-                    for (let j = 0; j < headers.length; j++) {
-                        let td = document.createElement('td');
-                        td.textContent = sheetData[i][j];
-                        tr.appendChild(td);
-                    }
-                    tableBody.appendChild(tr);
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                if (response.ok) {
+                    alert("Thank You! We will Contact you Soon!");
+                    window.location.reload();
+                } else {
+                    return Promise.reject(new Error('Please Send again!'));
                 }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => console.error('Error!', error.message));
     });

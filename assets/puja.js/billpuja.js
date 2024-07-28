@@ -78,7 +78,7 @@ const body = document.querySelector("body"),
 
     //for table view
     document.addEventListener('DOMContentLoaded', function() {
-        fetch('https://script.google.com/macros/s/AKfycby6kIkSwiTFaZt-gPODlEOFPwigQlgBO0L1ktYMjcRiwfhmFNWY8WNIB9BopLmP4jwM8Q/exec?sheet=puja&range=J1:N15')
+        fetch('https://script.google.com/macros/s/AKfycby6kIkSwiTFaZt-gPODlEOFPwigQlgBO0L1ktYMjcRiwfhmFNWY8WNIB9BopLmP4jwM8Q/exec?sheet=puja&range=K1:N15')
             .then(response => response.json())
             .then(sheetData => {
                 const tableHeader = document.getElementById('table-header');

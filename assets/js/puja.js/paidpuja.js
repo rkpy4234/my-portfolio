@@ -76,10 +76,9 @@ const body = document.querySelector("body"),
         }
     });
 
-    
-    //table view
+    //for table view
     document.addEventListener('DOMContentLoaded', function() {
-        fetch('https://script.google.com/macros/s/AKfycby6kIkSwiTFaZt-gPODlEOFPwigQlgBO0L1ktYMjcRiwfhmFNWY8WNIB9BopLmP4jwM8Q/exec?sheet=puja&range=C1:E15')
+        fetch('https://script.google.com/macros/s/AKfycby6kIkSwiTFaZt-gPODlEOFPwigQlgBO0L1ktYMjcRiwfhmFNWY8WNIB9BopLmP4jwM8Q/exec?sheet=puja&range=F1:H15')
             .then(response => response.json())
             .then(sheetData => {
                 const tableHeader = document.getElementById('table-header');

@@ -65,8 +65,10 @@ const body = document.querySelector("body"),
           }
       })
 
-    //fullname display
-      document.addEventListener('DOMContentLoaded', function () {
+      //header closed
+
+       //fullname display
+       document.addEventListener('DOMContentLoaded', function () {
         var fullName = localStorage.getItem('fullName');
         if (fullName) {
             document.getElementById('fullName').textContent = fullName;
@@ -76,33 +78,31 @@ const body = document.querySelector("body"),
         }
     });
 
-    
-    //table view
-    document.addEventListener('DOMContentLoaded', function() {
-        fetch('https://script.google.com/macros/s/AKfycby6kIkSwiTFaZt-gPODlEOFPwigQlgBO0L1ktYMjcRiwfhmFNWY8WNIB9BopLmP4jwM8Q/exec?sheet=puja&range=C1:E15')
-            .then(response => response.json())
-            .then(sheetData => {
-                const tableHeader = document.getElementById('table-header');
-                const tableBody = document.getElementById('table-body');
+    //for analog Clock
 
-                // Add headers to the table
-                let headers = sheetData[0];
-                headers.forEach(header => {
-                    let th = document.createElement('th');
-                    th.textContent = header;
-                    tableHeader.appendChild(th);
-                });
+    let hr = document.getElementById('hour');
+let min = document.getElementById('min');
+let sec = document.getElementById('sec');
 
-                // Add data rows to the table
-                for (let i = 1; i < sheetData.length; i++) {
-                    let tr = document.createElement('tr');
-                    for (let j = 0; j < headers.length; j++) {
-                        let td = document.createElement('td');
-                        td.textContent = sheetData[i][j];
-                        tr.appendChild(td);
-                    }
-                    tableBody.appendChild(tr);
-                }
-            })
-            .catch(error => console.error('Error:', error));
-    });
+function displayTime(){
+    let date = new Date();
+
+    // Getting hour, mins, secs from date
+    let hh = date.getHours();
+    let mm = date.getMinutes();
+    let ss = date.getSeconds();
+
+    let hRotation = 30*hh + mm/2;
+    let mRotation = 6*mm;
+    let sRotation = 6*ss;
+
+    hr.style.transform = `rotate(${hRotation}deg)`;
+    min.style.transform = `rotate(${mRotation}deg)`;
+    sec.style.transform = `rotate(${sRotation}deg)`;
+
+}
+
+setInterval(displayTime, 1000);
+   
+
+   

@@ -76,10 +76,9 @@ const body = document.querySelector("body"),
         }
     });
 
-    
-    //table view
+    //for table view
     document.addEventListener('DOMContentLoaded', function() {
-        fetch('https://script.google.com/macros/s/AKfycby6kIkSwiTFaZt-gPODlEOFPwigQlgBO0L1ktYMjcRiwfhmFNWY8WNIB9BopLmP4jwM8Q/exec?sheet=puja&range=C1:E15')
+        fetch('https://script.google.com/macros/s/AKfycby6kIkSwiTFaZt-gPODlEOFPwigQlgBO0L1ktYMjcRiwfhmFNWY8WNIB9BopLmP4jwM8Q/exec?sheet=puja&range=J1:N15')
             .then(response => response.json())
             .then(sheetData => {
                 const tableHeader = document.getElementById('table-header');
@@ -98,7 +97,18 @@ const body = document.querySelector("body"),
                     let tr = document.createElement('tr');
                     for (let j = 0; j < headers.length; j++) {
                         let td = document.createElement('td');
-                        td.textContent = sheetData[i][j];
+
+                        // Check if the cell contains a photo URL
+                        if (headers[j].toLowerCase().includes('photo')) {
+                            let img = document.createElement('img');
+                            img.src = sheetData[i][j];
+                            img.alt = 'Photo';
+                            img.style.width = '100px'; // Adjust size as needed
+                            td.appendChild(img);
+                        } else {
+                            td.textContent = sheetData[i][j];
+                        }
+
                         tr.appendChild(td);
                     }
                     tableBody.appendChild(tr);
