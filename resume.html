@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Calibri', sans-serif;
+
+        }
+
+        :root {
+            --body-color: #f4f4f4;
+            --line-color: #3498db;
+            --text-color: #595959;
+            --header-color: #2c3e50;
+            --main-container: rgba(54, 162, 235, 0.2);
+            --container-color: #fff;
+            --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bdy {
+            padding: 30px 0;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-color: var(--body-color);
+
+        }
+
+        .main_cv {
+            width: 794px;
+            height: 1016px;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            box-shadow: var(--box-shadow);
+
+        }
+
+        .inner_cv {
+            width: 794px;
+            height: 1016px;
+            background-color: var(--main-container);
+        }
+
+        .inner_cv .col-3 {
+            margin: 50px 0 0 35px;
+            width: 250px;
+            float: left;
+            border-radius: 40px;
+
+        }
+
+        .col-3 img {
+            width: 160px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .col-3 .profile {
+            margin-left: 25px;
+            width: 160px;
+            height: auto;
+            border: 2px solid var(--line-color);
+            border-radius: 50%;
+        }
+
+        .col-3 h2 {
+            width: 100%;
+            font-size: 25PX;
+            color: var(--header-color);
+            border-bottom: 3px solid var(--line-color);
+        }
+
+        p {
+            font-size: 17px;
+            margin-top: 15px;
+            text-align: justify;
+            color: var(--text-color);
+            width: 100%;
+        }
+
+        /* for languages */
+
+        .language li {
+            margin-top: 10px;
+            list-style: none;
+
+        }
+
+        .lang {
+            margin-top: 8px;
+            width: 100%;
+            background: var(--main-container);
+            display: block;
+            height: 5px;
+            border: 1px solid var(--line-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+
+        .lang span {
+            height: 5px;
+            float: left;
+            background: linear-gradient(135deg, var(--header-color) 0%, var(--text-color) 100%);
+        }
+
+        .nepali {
+            width: 90%;
+            animation: nepali 3s;
+        }
+
+        .english {
+            width: 70%;
+            animation: english 3s;
+        }
+
+
+        @keyframes nepali {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        @keyframes english {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 70%;
+            }
+        }
+
+        /* end of language */
+
+        .findme img {
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .contact {
+            width: 100%;
+        }
+
+        .contact img {
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .contact p {
+            font-size: 18px;
+        }
+
+
+
+        .col-9 {
+            margin: 50px 0;
+            width: 470px;
+            height: 916px;
+            border-radius: 40px 0 0 40px;
+            display: flex;
+            float: right;
+            background-color: var(--container-color);
+            box-shadow: var(--box-shadow);
+        }
+
+        .name {
+            width: 100%;
+            margin-top: 30px;
+            padding-left: 40PX;
+            font-size: 22px;
+            /* font-style: Calibri; */
+            color: var(--header-color);
+        }
+
+        h1 span {
+            width: 100%;
+            color: var(--line-color);
+            display: flex;
+            justify-content: center;
+        }
+
+        .col-9 h2 {
+            width: 90%;
+            font-size: 25PX;
+            color: var(--header-color);
+            border-bottom: 3px solid var(--line-color);
+        }
+
+        .col-9 .education {
+            margin-top: 50px;
+        }
+
+        .education h4 {
+            font-size: 19px;
+        }
+
+        .education li {
+            font-size: 17px;
+        }
+
+        .skills li {
+            list-style: none;
+
+        }
+
+        .skill {
+            width: 90%;
+            background: var(--main-container);
+            display: block;
+            height: 4px;
+            border: 1px solid var(--line-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+
+        .skill span {
+            height: 4px;
+            float: left;
+            background: linear-gradient(135deg, var(--header-color) 0%, var(--text-color) 100%);
+        }
+
+        .html {
+            width: 90%;
+            animation: html 3s;
+        }
+
+        .wordpress {
+            width: 70%;
+            animation: wordpress 3s;
+        }
+
+        .github {
+            width: 90%;
+            animation: github 3s;
+        }
+
+        .sql {
+            width: 50%;
+            animation: sql 3s;
+        }
+
+        .c {
+            width: 50%;
+            animation: c 3s;
+        }
+
+        .java {
+            width: 60%;
+            animation: java 3s;
+        }
+
+
+        @keyframes html {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        @keyframes wordpress {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 70%;
+            }
+        }
+
+        @keyframes github {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        @keyframes sql {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 50%;
+            }
+        }
+
+        @keyframes c {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 50%;
+            }
+        }
+
+        @keyframes java {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 60%;
+            }
+        }
+
+        .softskill h2 {
+            margin-bottom: 10px;
+        }
+
+        .softskill li {
+            font-size: 17px;
+        }
+
+
+        .print-button {
+            width: 100%;
+            padding: 20px 0 50px 0;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: var(--body-color);
+        }
+
+        .print-button button {
+            cursor: pointer;
+            font-size: 25px;
+            padding: 5px 70px;
+            font-weight: 700;
+            border: none;
+
+            border-radius: 10px;
+            background-color: var(--container-color);
+            box-shadow: var(--box-shadow);
+        }
+        .print-button button:hover{
+            color: #fff;
+            background-color: var(--line-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bdy">
+        <div class="main_cv">
+            <div class="inner_cv">
+                <div class="col-3">
+                    <div class="profile">
+                        <img src="./assets/images/pic.png">
+                    </div><br>
+                    <h2>PROFILE INFO</h2>
+                    <p>
+                        I'm interested in Full Stack development, but I currently only have front-end knowledge. I’m
+                        dedicated to working hard and am excited to expand my skills into Full Stack development.
+                    </p>
+                    <BR>
+
+                    <div class="language">
+                        <h2>LANGUAGES :</h2>
+                        <li>
+                            <p>Nepali</p>
+                            <span class="lang"><span class="nepali"></span>
+                        </li>
+                        <li>
+                            <p>English</p>
+                            <span class="lang"><span class="english"></span>
+                        </li>
+                    </div><br><br>
+
+                    <div class="findme">
+                        <h2>FIND ME ON :</h2>
+                        <p><img src="./assets/images/facebook.png"> Ram Krishna Yadav</p>
+                        <p><img src="./assets/images/linkedin.png"> Ram Krishna Yadav</p>
+                        <p><img src="./assets/images/github.png"> Ram Krishna Yadav</p>
+
+
+                    </div><br><br>
+
+                    <div class="contact">
+                        <H2>CONTACT DETAILS :</H2>
+                        <p><img src="./assets/images/telephone.png"> +977-9823434234</p>
+                        <p><img src="./assets/images/envelope.png"> ramkrishnay950@gmail.com</p>
+                        <p><img src="./assets/images/telephone.png"> Chabahil, Kathmandu</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-9">
+                    <div class="name">
+                        <h1>RAM KRISHNA </h1>
+                        <h1><span>YADAV</span></h1>
+
+                        <div class="education">
+                            <h2>EDUCATION</h2>
+                            <h4 style="margin-top: 10px;">Texas College of Management and IT</h4>
+                            <li>Studying Information Techmology</li>
+                            <li>2<sup>nd</sup>Year</li>
+                            <h4>Xavier International Academy</h4>
+                            <li>Completed +2 on 2021</li>
+                            <li>Faculty: Computer Science</li>
+                            <br>
+                        </div>
+
+                        <div class="skills">
+                            <h2>Skills</h2>
+                            <li>
+                                <p>HTML & CSS</p>
+                                <span class="skill"><span class="html"></span>
+                            </li>
+                            <li>
+                                <p>WordPress</p>
+                                <span class="skill"><span class="wordpress"></span>
+                            </li>
+                            <li>
+                                <p>GitHub</p>
+                                <span class="skill"><span class="github"></span>
+                            </li>
+                            <li>
+                                <p>SQL Server Management</p>
+                                <span class="skill"><span class="sql"></span>
+                            </li>
+                            <li>
+                                <p>C#</p>
+                                <span class="skill"><span class="c"></span>
+                            </li>
+                            <li>
+                                <p>JavaScript</p>
+                                <span class="skill"><span class="java"></span>
+                            </li>
+                        </div><br>
+                        <div class="softskill">
+                            <h2>Soft Skills</h2>
+                            <li>Team Work</li>
+                            <li>Communication</li>
+                            <li>Adaptability</li>
+                            <li>Time Management</li>
+                            <li>Attention</li>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- print button -->
+    <div class="print-button">
+        <a href="index.html"><button>Home</button></a>
+        <button onclick="printCV()">Print CV</button>
+    </div>
+
+    <script>
+        function printCV() {
+            const originalContents = document.body.innerHTML;
+            const printContents = document.querySelector('.main_cv').innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+    </script>
+
+</body>
+
+</html>

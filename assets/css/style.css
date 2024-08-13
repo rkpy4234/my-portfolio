@@ -508,10 +508,7 @@ section{
 
 .col-md-4 .about img{
     width: 100%;
-    border: none;
-    border-radius: 20px;
     cursor: pointer;
-    box-shadow: var(--box-shadow);
 }
 .col-md-4 .about img:hover{
     transform: scale(1.1);
@@ -521,9 +518,11 @@ section{
     color: var(--text-color);
     font-size: 18px;
     margin: 20px 30px 20px 50px;
+    text-align: justify;
+    margin-bottom: 50px;
 }
 .about-content h5{
-    margin: 80px 30px 20px 50px;
+    margin: 20px 30px 20px 50px;
     font-size: 25px;
     font-weight: 600;
     color: var(--header);
